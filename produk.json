@@ -1,0 +1,26 @@
+[
+  {
+    "thumbnail": "media/tumnel.jpg",
+    "nama": "Sewa Bot",
+    "harga": "Mulai dari Rp5.000",
+    "desc": "Bot otomatis untuk grup WhatsApp",
+    "descmodal": "Detail lengkap sewa bot...",
+    "kategori": "Bot"
+  },
+  {
+    "thumbnail": "media/tumnel.jpg",
+    "nama": "Premium Membership",
+    "harga": "Mulai dari Rp5.000",
+    "desc": "Akses fitur premium",
+    "descmodal": "Detail premium...",
+    "kategori": "Premium"
+  },
+  {
+    "thumbnail": "media/tumnel.jpg",
+    "nama": "Panel Pterodactyl",
+    "harga": "Mulai dari Rp3.000",
+    "desc": "Panel server bot",
+    "descmodal": "Detail panel...",
+    "kategori": "Panel"
+  }
+]
