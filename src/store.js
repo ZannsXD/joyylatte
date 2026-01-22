@@ -1,43 +1,35 @@
 const productList = document.querySelector('.product-list');
-const categoryContainer = document.createElement('div');
-categoryContainer.classList.add('category-buttons');
-document.querySelector('main').insertBefore(categoryContainer, productList);
-
+const categoryFilter = document.getElementById('categoryFilter');
 let products = [];
-let currentCategory = 'All';
 
-async function loadProducts() {
-  try {
-    const res = await fetch('src/produk.json');
-    products = await res.json();
+fetch('produk.json')
+  .then(res => res.json())
+  .then(data => {
+    products = data;
     generateCategories();
-    displayProducts();
-  } catch (error) {
-    console.error('Gagal load produk:', error);
-  }
-}
+    displayProducts('All');
+  });
 
 function generateCategories() {
   const categories = ['All', ...new Set(products.map(p => p.kategori))];
-  categoryContainer.innerHTML = '';
+  categoryFilter.innerHTML = '';
   categories.forEach(cat => {
     const btn = document.createElement('button');
     btn.textContent = cat;
     btn.classList.add('category-btn');
     if (cat === 'All') btn.classList.add('active');
     btn.addEventListener('click', () => {
-      currentCategory = cat;
       document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      displayProducts();
+      displayProducts(cat);
     });
-    categoryContainer.appendChild(btn);
+    categoryFilter.appendChild(btn);
   });
 }
 
-function displayProducts() {
+function displayProducts(category) {
   productList.innerHTML = '';
-  const filtered = currentCategory === 'All' ? products : products.filter(p => p.kategori === currentCategory);
+  const filtered = category === 'All' ? products : products.filter(p => p.kategori === category);
   filtered.forEach(p => {
     const card = document.createElement('div');
     card.classList.add('product-card');
@@ -45,10 +37,10 @@ function displayProducts() {
       <img src="${p.thumbnail}">
       <h3>${p.nama}</h3>
       <p>${p.desc}</p>
-      <button class="openModalBtn" 
-        data-title="${p.nama}" 
-        data-price="${p.harga}" 
-        data-desc="${p.descmodal}" 
+      <button class="openModalBtn"
+        data-title="${p.nama}"
+        data-price="${p.harga}"
+        data-desc="${p.descmodal}"
         data-img="${p.thumbnail}">
         Cek Harga
       </button>
@@ -63,7 +55,6 @@ function attachModalEvents() {
   const modal = document.getElementById('productModal');
   const closeBtn = document.querySelector('.closeBtn');
   const backBtn = document.querySelector('.btn-back');
-
   const modalImg = document.getElementById('modalImg');
   const modalTitle = document.getElementById('modalTitle');
   const modalPrice = document.getElementById('modalPrice');
@@ -74,15 +65,12 @@ function attachModalEvents() {
       modal.style.display = 'flex';
       modalTitle.textContent = btn.getAttribute('data-title');
       modalPrice.textContent = btn.getAttribute('data-price');
-      modalDesc.textContent = btn.getAttribute('data-desc');
-      modalDesc.innerHTML = modalDesc.textContent.replace(/\\n/g, '<br>');
+      modalDesc.innerHTML = btn.getAttribute('data-desc');
       modalImg.src = btn.getAttribute('data-img');
     });
   });
 
   closeBtn.addEventListener('click', () => modal.style.display = 'none');
   backBtn.addEventListener('click', () => modal.style.display = 'none');
-  window.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+  window.addEventListener('click', e => { if(e.target === modal) modal.style.display = 'none'; });
 }
-
-loadProducts();
