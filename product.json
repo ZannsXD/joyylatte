@@ -1,0 +1,18 @@
+[
+  {
+    "nama": "Panel Pterodactyl",
+    "harga": "Mulai dari Rp3.000",
+    "deskripsi1": "Server premium anti delay.",
+    "deskripsi2": "Detail lengkap harga & spesifikasi panel.",
+    "kategori": "hosting",
+    "gambar": "media/tumnel.jpg"
+  },
+  {
+    "nama": "Script Vanyla AI",
+    "harga": "Rp25.000",
+    "deskripsi1": "Script bot WhatsApp no encrypt.",
+    "deskripsi2": "1000+ fitur, AI, RPG, dll.",
+    "kategori": "script",
+    "gambar": "media/tumnel.jpg"
+  }
+]
