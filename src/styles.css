@@ -420,3 +420,58 @@ hr {
 #modalDesc::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-color);
 }
+
+/* === CATEGORY FILTER === */
+.category-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 1.5rem auto 2.5rem;
+}
+
+.category-filter button {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.category-filter button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.category-filter button.active {
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.6);
+}
+
+/* OVERRIDE PRODUCT LIST */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1.5rem 3rem;
+}
+
+.product-card {
+  animation: fadeUp 0.4s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
