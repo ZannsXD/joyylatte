@@ -4,32 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Store | Vanyla</title>
-
   <link rel="stylesheet" href="src/style.css" />
   <link rel="stylesheet" href="src/styles.css" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-<!-- Loading Screen -->
-<div id="loading-screen" class="loading-screen">
-  <div class="loading-content">
-    <i data-lucide="loader-2" class="loading-icon"></i>
-    <p>Loading...</p>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <i data-lucide="loader-2" class="loading-icon"></i>
+      <p>Loading...</p>
+    </div>
   </div>
-</div>
 
-<!-- Navbar -->
+  <!-- Navbar -->
 <nav class="navbar">
   <div class="nav-content">
     <span class="logo">Joyysrvx</span>
     <div class="nav-links desktop-nav">
       <a href="/" class="nav-link">Home</a>
       <a href="/store" class="nav-link">Store</a>
-      <a href="/vanyla" class="nav-link">Vanyla Ai</a>
+      <a href="/vanyla" class="nav-link">Vanyla Ai | Bot WhatsApp</a>
       <a href="/ngl" class="nav-link">NGL</a>
       <a href="/game/game" class="nav-link">Game</a>
     </div>
@@ -39,149 +37,185 @@
   </div>
 </nav>
 
-<!-- Sidebar -->
 <div id="sidebar" class="sidebar">
   <div class="sidebar-content">
     <button id="close-sidebar" class="close-button">
       <i data-lucide="x"></i>
     </button>
     <div class="sidebar-links">
-      <a href="/" class="sidebar-link"><i data-lucide="home"></i>Home</a>
-      <a href="/store" class="sidebar-link"><i data-lucide="store"></i>Store</a>
-      <a href="/vanyla" class="sidebar-link"><i data-lucide="bot"></i>Vanyla Ai</a>
-      <a href="/ngl" class="sidebar-link"><i data-lucide="mail"></i>NGL</a>
-      <a href="/game/game" class="sidebar-link"><i data-lucide="gamepad-2"></i>Game</a>
+      <a href="/" class="sidebar-link">
+        <i data-lucide="home"></i>
+        Home
+      </a>
+      <a href="/store" class="sidebar-link">
+        <i data-lucide="store"></i>
+        Store
+      </a>
+      <a href="/vanyla" class="sidebar-link">
+        <i data-lucide="bot"></i>
+        About Vanyla Ai
+      </a>
+      <a href="/ngl" class="sidebar-link">
+        <i data-lucide="mail"></i>
+        NGL
+      </a>
+      <a href="/game/game" class="sidebar-link">
+        <i data-lucide="gamepad-2"></i>
+        Game
+      </a>
     </div>
   </div>
 </div>
 
-<!-- HEADER STORE -->
-<section class="bot-info-section">
-  <p class="subheader">Pricing</p>
-  <p class="subdesc">Pilih kategori produk yang Anda butuhkan</p>
-</section>
+<section id="bot-info" class="bot-info-section">
+  
+  <!-- Gambar Lingkaran Animasi -->
+<div class="circle-float-container">
+  <img src="https://files.catbox.moe/p0l7gc.jpg" alt="Floating Circle" class="circle-float">
+</div>
+  <!-- Teks Biasa -->
+<p class="subheader">
+  About Me
+</p>
+<p class="subdesc">
+ Halo semua, Saya adalah sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu, mencari dan mendapatkan data/informasi hanya melalui WhatsApp.
+</p>
 
-<!-- CATEGORY CARD -->
-<section class="category-grid" id="categoryFilter">
-  <!-- auto render -->
-</section>
+  <!-- Info Lain -->
+  <div class="bot-info-container">
 
-<!-- PRODUCT LIST -->
-<section class="product-list" id="productList">
-  <!-- auto render -->
-</section>
-
-<!-- MODAL -->
-<div class="modal" id="productModal">
-  <div class="modal-content">
-    <span class="closeBtn">&times;</span>
-    <div class="modal-header">
-      <img id="modalImg" src="" alt="">
+    <div class="bot-info-item">
+      <h3>Mode Bot</h3>
+      <p>
+        Online
+        <span class="on"></span>
+      </p>
     </div>
-    <div class="modal-body">
-      <h2 id="modalTitle"></h2>
-      <p class="price" id="modalPrice"></p>
-      <hr>
-      <h3>Description</h3>
-      <p id="modalDesc"></p>
 
-      <div class="modal-buttons">
-        <button class="btn-back">Back</button>
-        <button class="btn-order" onclick="window.open('https://wa.me/6285168634922','_blank')">
-          Continue to Order
-        </button>
+    <div class="bot-info-item">
+      <h3>Total Fitur</h3>
+      <p>
+        1000+
+        <i class="fas fa-fire icon-fire"></i>
+      </p>
+    </div>
+
+    <div class="bot-info-item">
+      <h3>Type Script</h3>
+      <p>
+        Plugins
+        <i class="fas fa-snowflake icon-snow"></i>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <main>
+    
+<p class="subheader">
+  Pricing
+</p>
+<p class="subdesc">
+  Pilih paket yang sesuai dengan kebutuhan Anda.
+</p>
+    <!-- Produk List -->
+    <section class="product-list">
+
+      <!-- Produk 1 -->
+      <div class="product-card">
+        <img src="media/tumnel.jpg">
+        <h3>Sewa Bot</h3>
+        <p>Jalankan Bisnis Atau Setting Group Anda Dengan Mudah Dengan Harga Mulai Dari 5rb.</p>
+        <button class="openModalBtn" 
+          data-title="Sewa Botz" 
+          data-price="Mulai dari Rp5.000" 
+          data-desc="❏ Harga Sewa<br>❃ 10 Hari Rp5.000 / Group<br>❃ 20 Hari Rp10.000 / Group<br>❃ 30 Hari Rp15.000 / Group<br>❃ 40 Hari Rp20.000 / Group<br>❃ Permanen Rp30.000 / Group<br><br>❏ Fitur<br>❃ Antilink<br>❃ Welcome<br>❃ Enable<br>❃ Store List<br>❃ Promote/Demote<br>❃ HideTag<br>❃ Dan Lain Lain<br><br>Paket Sepesial : Rp40.000<br>Sewa & Premium Permanent"
+          data-img="media/tumnel.jpg">Cek Harga</button>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="product-card">
+        <img src="media/tumnel.jpg">
+        <h3>Premium Membership</h3>
+        <p>Upgrade Statusmu Menjadi Premium Dan Dapatkan Bonus Bonus Menarik Dengan Harga Mulai Dari 5rb.</p>
+        <button class="openModalBtn" 
+          data-title="Premium Membership" 
+          data-price="Mulai dari Rp5.000" 
+          data-desc="❏ Harga Premium<br>❃ 15 Hari / Rp5.000<br>❃ 30 Hari / Rp10.000<br>❃ 45 Hari / Rp15.000<br>❃ 60 Hari / Rp20.000<br>❃ Permanen / Rp30.000<br><br>❏ Fitur<br>❃ Unlimited Limit<br>❃ Bonus Money Game<br>❃ Maker Sticker<br>❃ Bebas Pakai Bot Di Pc<br>❃ Dan Lain Lain<br><br>Paket Sepesial : Rp40.000<br>Sewa & Premium Permanent"
+          data-img="media/tumnel.jpg">Cek Harga</button>
+      </div
+      
+      <!-- Produk 2 -->
+      <div class="product-card">
+        <img src="media/tumnel.jpg">
+        <h3>Jadi Bot</h3>
+        <p>Maengatur Nomormu Untuk Merespons Pesan Secara Otomatis Berdasarkan Kata Kunci Atau Pola Tertentu, Meningkatkan Efisiensi Komunikasi.</p>
+        <button class="openModalBtn" 
+          data-title="Jadi Bot" 
+          data-price="Mulai dari Rp7.000" 
+          data-desc="❏ Harga Jadi Bot<br>❃ 07 Hari / Rp7.000<br>❃ 15 Hari / Rp10.000<br>❃ 30 Hari / Rp15.000<br><br>❏ Keuntungan<br>❃ Nomormu Jadi Owner<br>❃ Bisa Open Sewa<br>❃ Bisa Open Premium<br>❃ Fitur Anti Eror<br>❃ Dan Lain Lain"
+          data-img="media/tumnel.jpg">Cek Harga</button>
+      </div>
+      
+      <!-- Produk 2 -->
+      <div class="product-card">
+        <img src="media/tumnel.jpg">
+        <h3>Panel Pterodactyl</h3>
+        <p>Jalankan Script Bot Kamu Dengan Server Premium Anti Delay Dan Server Terjaga Aman.</p>
+        <button class="openModalBtn" 
+          data-title="Panel Pterodactyl" 
+          data-price="Mulai dari Rp3.000" 
+          data-desc="⌞   PANEL PRIVATE BY VANYLA 🍦 ⌝<br><br>→ RAM 3GB CPU UNLI — Rp 3.000<br>→ RAM 4GB CPU UNLI— Rp 4.000<br>→ RAM 5GB CPU UNLI— Rp 5.000<br>→ RAM 6GB CPU UNLI—  Rp 6.000<br>→ RAM 7GB CPU UNLI— Rp 7.000<br>→ RAM 8GB CPU UNLI— Rp 8.000<br>→ RAM 9GB CPU UNLI— Rp 9.000<br>→ RAM & CPU UNLI  — Rp 10.000<br><br>Spesifikasi:<br>- Garansi: Full 30 Hari<br>- Type: Private Server<br>- Spek: VPS Premium Amd Bill by Paypal<br><br>NOTE<br>penggunaan panel harus sesuai dengan ketentuan layanan (TOS). Dilarang digunakan untuk:<br>- DDOS<br>- HACKING<br>- MINING<br>- Aktivitas ilegal lainnya"
+          data-img="media/tumnel.jpg">Cek Harga</button>
+      </div>
+      
+      <!-- Produk 2 -->
+      <div class="product-card">
+        <img src="media/tumnel.jpg">
+        <h3>Script Vanyla Ai</h3>
+        <p>Dapatkan Script Bot WhatsApp No Encrypt 100% Dan Fitur 90% Work Dengan Harga Mulai Dari Rp25.000.</p>
+        <button class="openModalBtn" 
+          data-title="Panel Pterodactyl" 
+          data-price="Mulai dari Rp25.000" 
+          data-desc="Dapatkan solusi komunikasi WhatsApp yang efektif dan efisien dengan Vanyla Plugins ESM. Tingkatkan interaksi dan pengalaman pengguna Anda dengan fitur-fitur canggih yang kami tawarkan!<br><br>✨ Fitur Unggulan:<br>- 1000+ Fitur<br>  - Akses beragam fitur untuk mengelola komunikasi WhatsApp dengan lebih baik.<br>  <br>- Pesan Button<br>  - Permudah interaksi pengguna dengan pesan button yang intuitif, memungkinkan pengguna untuk memilih opsi dengan mudah.<br><br>- Respon Otomatis<br>  - Atur bot untuk merespons pesan secara otomatis berdasarkan kata kunci atau pola tertentu, meningkatkan efisiensi komunikasi.<br><br>- Pengiriman Pesan<br>  - Kirim teks, gambar, video, dan file lainnya dengan mudah, memastikan informasi sampai ke pengguna dengan cepat.<br><br>- Pengelolaan Data<br>  - Kelola data pengguna secara efisien dan efektif, memungkinkan analisis dan pengambilan keputusan yang lebih baik.<br><br>- RPG Games<br>  - Nikmati pengalaman bermain game RPG yang seru langsung di WhatsApp, menambah elemen hiburan dalam komunikasi.<br><br>- Fitur Pencarian<br>  - Temukan informasi yang Anda butuhkan dengan fitur pencarian yang canggih, memudahkan akses ke data penting.<br><br>- Integrasi AI<br>  - Manfaatkan teknologi AI untuk meningkatkan interaksi. Bot dapat belajar dari interaksi sebelumnya, memberikan respon yang lebih relevan dan personal kepada pengguna.<br><br>🌟 Kelebihan<br>- Mudah Digunakan<br>  - Bot dapat diatur dan dioperasikan dengan mudah, bahkan tanpa pengalaman programming. Antarmuka yang ramah pengguna membuatnya mudah diakses oleh siapa saja.<br><br>- Fleksibel<br>  - Integrasikan dengan berbagai API dan layanan untuk memperluas fungsionalitas, memungkinkan penyesuaian sesuai kebutuhan bisnis Anda.<br><br>- Skalabel<br>  - Tangani banyak pengguna dan pesan secara bersamaan tanpa penurunan performa, ideal untuk bisnis yang berkembang pesat.<br><br>- Script Tidak Dienkripsi<br>  - Dapatkan akses penuh ke kode sumber, memungkinkan Anda untuk melakukan modifikasi dan penyesuaian sesuai kebutuhan spesifik Anda.<br><br>Price: Rp25.000<br>Payment: All Payment<br><br>Note: Kami sudah tidak menyediakan free update, jika ingin mendapatkan update, anda bisa membelinya dengan harga 5-15K setiap update di versi berikutnya, rendah tingginya harga tergantung dari skala update."
+          data-img="media/tumnel.jpg">Cek Harga</button>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="closeBtn">&times;</span>
+      <div class="modal-header">
+        <img id="modalImg" src="" alt="Product Image">
+      </div>
+      <div class="modal-body">
+        <h2 id="modalTitle"></h2>
+        <p class="price" id="modalPrice"></p>
+
+        <hr>
+
+        <h3>Description</h3>
+        <p id="modalDesc"></p>
+
+        <div class="modal-buttons">
+          <button class="btn-back">Back</button>
+          <button class="btn-order" onclick="window.open('https://wa.me/6285168634922', '_blank')">
+  Continue to Order
+</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
+  
 <footer class="footer">
-  <p>
-    Need help with your purchase?
-    <a href="https://wa.me/6285168634922" target="_blank">Contact WhatsApp</a>
-  </p>
+  <p>Need help with your purchase? Contact us directly on WhatsApp at <a href="https://wa.me/6285168634922" target="_blank">+6285168634922</a></p>
 </footer>
 
+<script src="src/script.js"></script>
 <script src="src/main.js"></script>
-
-<script>
-const categoryContainer = document.getElementById('categoryFilter');
-const productContainer = document.getElementById('productList');
-
-const modal = document.getElementById('productModal');
-const modalImg = document.getElementById('modalImg');
-const modalTitle = document.getElementById('modalTitle');
-const modalPrice = document.getElementById('modalPrice');
-const modalDesc = document.getElementById('modalDesc');
-const closeBtn = document.querySelector('.closeBtn');
-const backBtn = document.querySelector('.btn-back');
-
-let products = [];
-
-fetch('product.json')
-  .then(res => res.json())
-  .then(data => {
-    products = data;
-    renderCategories(data);
-  });
-
-function renderCategories(data) {
-  const categories = [...new Set(data.map(p => p.kategori))];
-
-  categoryContainer.innerHTML = categories.map(cat => `
-    <div class="category-card" onclick="selectCategory('${cat}', this)">
-      <img src="media/${cat}.jpg">
-      <div class="category-card-content">
-        <h3>${capitalize(cat)}</h3>
-        <p>Lihat produk ${cat}</p>
-      </div>
-    </div>
-  `).join('');
-}
-
-function selectCategory(category, el) {
-  document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
-  el.classList.add('active');
-
-  const filtered = products.filter(p => p.kategori === category);
-
-  productContainer.innerHTML = filtered.map(p => `
-    <div class="product-card">
-      <img src="${p.thumbnail}">
-      <h3>${p.nama}</h3>
-      <p>${p.deskripsi1}</p>
-      <button class="openModalBtn"
-        data-title="${p.nama}"
-        data-price="${p.harga}"
-        data-desc="${p.deskripsi2}"
-        data-img="${p.thumbnail}">
-        Cek Harga
-      </button>
-    </div>
-  `).join('');
-
-  initModal();
-}
-
-function initModal() {
-  document.querySelectorAll('.openModalBtn').forEach(btn => {
-    btn.onclick = () => {
-      modal.style.display = 'flex';
-      modalTitle.textContent = btn.dataset.title;
-      modalPrice.textContent = btn.dataset.price;
-      modalDesc.innerHTML = btn.dataset.desc;
-      modalImg.src = btn.dataset.img;
-    };
-  });
-}
-
-closeBtn.onclick = backBtn.onclick = () => modal.style.display = 'none';
-window.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
-
-function capitalize(text) {
-  return text.charAt(0).toUpperCase() + text.slice(1);
-}
-</script>
-
 </body>
 </html>
