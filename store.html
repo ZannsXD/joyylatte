@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="src/style.css" />
   <link rel="stylesheet" href="src/styles.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -38,7 +39,7 @@
   </div>
 </nav>
 
-<!-- SIDEBAR -->
+<!-- Sidebar -->
 <div id="sidebar" class="sidebar">
   <div class="sidebar-content">
     <button id="close-sidebar" class="close-button">
@@ -47,52 +48,46 @@
     <div class="sidebar-links">
       <a href="/" class="sidebar-link"><i data-lucide="home"></i>Home</a>
       <a href="/store" class="sidebar-link"><i data-lucide="store"></i>Store</a>
-      <a href="/vanyla" class="sidebar-link"><i data-lucide="bot"></i>Vanyla AI</a>
+      <a href="/vanyla" class="sidebar-link"><i data-lucide="bot"></i>Vanyla Ai</a>
       <a href="/ngl" class="sidebar-link"><i data-lucide="mail"></i>NGL</a>
       <a href="/game/game" class="sidebar-link"><i data-lucide="gamepad-2"></i>Game</a>
     </div>
   </div>
 </div>
 
-<!-- INFO -->
+<!-- HEADER STORE -->
 <section class="bot-info-section">
-  <div class="circle-float-container">
-    <img src="https://files.catbox.moe/p0l7gc.jpg" class="circle-float">
-  </div>
-
   <p class="subheader">Pricing</p>
-  <p class="subdesc">Pilih kategori lalu tentukan produk yang sesuai kebutuhan Anda.</p>
+  <p class="subdesc">Pilih kategori produk yang Anda butuhkan</p>
 </section>
 
-<!-- FILTER KATEGORI -->
-<div id="categoryFilter" style="text-align:center; margin-bottom:2rem;"></div>
+<!-- CATEGORY CARD -->
+<section class="category-grid" id="categoryFilter">
+  <!-- auto render -->
+</section>
 
-<!-- PRODUCT LIST (AUTO DARI JSON) -->
+<!-- PRODUCT LIST -->
 <section class="product-list" id="productList">
-  <!-- Diisi otomatis oleh script.js -->
+  <!-- auto render -->
 </section>
 
 <!-- MODAL -->
 <div class="modal" id="productModal">
   <div class="modal-content">
     <span class="closeBtn">&times;</span>
-
     <div class="modal-header">
-      <img id="modalImg">
+      <img id="modalImg" src="" alt="">
     </div>
-
     <div class="modal-body">
       <h2 id="modalTitle"></h2>
       <p class="price" id="modalPrice"></p>
-
       <hr>
-
       <h3>Description</h3>
       <p id="modalDesc"></p>
 
       <div class="modal-buttons">
         <button class="btn-back">Back</button>
-        <button class="btn-order" onclick="window.open('https://wa.me/6285168634922')">
+        <button class="btn-order" onclick="window.open('https://wa.me/6285168634922','_blank')">
           Continue to Order
         </button>
       </div>
@@ -101,10 +96,92 @@
 </div>
 
 <footer class="footer">
-  <p>Need help? Contact <a href="https://wa.me/6285168634922" target="_blank">WhatsApp</a></p>
+  <p>
+    Need help with your purchase?
+    <a href="https://wa.me/6285168634922" target="_blank">Contact WhatsApp</a>
+  </p>
 </footer>
 
-<script src="src/script.js"></script>
 <script src="src/main.js"></script>
+
+<script>
+const categoryContainer = document.getElementById('categoryFilter');
+const productContainer = document.getElementById('productList');
+
+const modal = document.getElementById('productModal');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalPrice = document.getElementById('modalPrice');
+const modalDesc = document.getElementById('modalDesc');
+const closeBtn = document.querySelector('.closeBtn');
+const backBtn = document.querySelector('.btn-back');
+
+let products = [];
+
+fetch('product.json')
+  .then(res => res.json())
+  .then(data => {
+    products = data;
+    renderCategories(data);
+  });
+
+function renderCategories(data) {
+  const categories = [...new Set(data.map(p => p.kategori))];
+
+  categoryContainer.innerHTML = categories.map(cat => `
+    <div class="category-card" onclick="selectCategory('${cat}', this)">
+      <img src="media/${cat}.jpg">
+      <div class="category-card-content">
+        <h3>${capitalize(cat)}</h3>
+        <p>Lihat produk ${cat}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+function selectCategory(category, el) {
+  document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+
+  const filtered = products.filter(p => p.kategori === category);
+
+  productContainer.innerHTML = filtered.map(p => `
+    <div class="product-card">
+      <img src="${p.thumbnail}">
+      <h3>${p.nama}</h3>
+      <p>${p.deskripsi1}</p>
+      <button class="openModalBtn"
+        data-title="${p.nama}"
+        data-price="${p.harga}"
+        data-desc="${p.deskripsi2}"
+        data-img="${p.thumbnail}">
+        Cek Harga
+      </button>
+    </div>
+  `).join('');
+
+  initModal();
+}
+
+function initModal() {
+  document.querySelectorAll('.openModalBtn').forEach(btn => {
+    btn.onclick = () => {
+      modal.style.display = 'flex';
+      modalTitle.textContent = btn.dataset.title;
+      modalPrice.textContent = btn.dataset.price;
+      modalDesc.innerHTML = btn.dataset.desc;
+      modalImg.src = btn.dataset.img;
+    };
+  });
+}
+
+closeBtn.onclick = backBtn.onclick = () => modal.style.display = 'none';
+window.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
+
+function capitalize(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+</script>
+
 </body>
 </html>
