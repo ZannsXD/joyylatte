@@ -51,42 +51,39 @@
 </div>
 
 <section id="bot-info" class="bot-info-section">
-  <div class="circle-float-container">
-    <img src="https://files.catbox.moe/p0l7gc.jpg" class="circle-float">
+<div class="circle-float-container">
+  <img src="https://files.catbox.moe/p0l7gc.jpg" alt="Floating Circle" class="circle-float">
+</div>
+<p class="subheader">About Me</p>
+<p class="subdesc">Halo semua, Saya adalah sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu, mencari dan mendapatkan data/informasi hanya melalui WhatsApp.</p>
+<div class="bot-info-container">
+  <div class="bot-info-item">
+    <h3>Mode Bot</h3>
+    <p>Online <span class="on"></span></p>
   </div>
-  <p class="subheader">About Me</p>
-  <p class="subdesc">
-    Halo semua, Saya adalah sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu, mencari dan mendapatkan data/informasi hanya melalui WhatsApp.
-  </p>
-  <div class="bot-info-container">
-    <div class="bot-info-item">
-      <h3>Mode Bot</h3>
-      <p>Online <span class="on"></span></p>
-    </div>
-    <div class="bot-info-item">
-      <h3>Total Fitur</h3>
-      <p>1000+ <i class="fas fa-fire icon-fire"></i></p>
-    </div>
-    <div class="bot-info-item">
-      <h3>Type Script</h3>
-      <p>Plugins <i class="fas fa-snowflake icon-snow"></i></p>
-    </div>
+  <div class="bot-info-item">
+    <h3>Total Fitur</h3>
+    <p>1000+ <i class="fas fa-fire icon-fire"></i></p>
   </div>
+  <div class="bot-info-item">
+    <h3>Type Script</h3>
+    <p>Plugins <i class="fas fa-snowflake icon-snow"></i></p>
+  </div>
+</div>
 </section>
 
 <main>
-  <p class="subheader">Pricing</p>
-  <p class="subdesc">Pilih paket yang sesuai dengan kebutuhan Anda.</p>
-
-  <div class="category-filter" id="categoryFilter"></div>
-  <section class="product-list" id="productList"></section>
+<p class="subheader">Pricing</p>
+<p class="subdesc">Pilih paket yang sesuai dengan kebutuhan Anda.</p>
+<div id="categoryFilter"></div>
+<section class="product-list"></section>
 </main>
 
 <div class="modal" id="productModal">
   <div class="modal-content">
     <span class="closeBtn">&times;</span>
     <div class="modal-header">
-      <img id="modalImg">
+      <img id="modalImg" src="" alt="Product Image">
     </div>
     <div class="modal-body">
       <h2 id="modalTitle"></h2>
@@ -96,23 +93,18 @@
       <p id="modalDesc"></p>
       <div class="modal-buttons">
         <button class="btn-back">Back</button>
-        <button class="btn-order" onclick="window.open('https://wa.me/6285168634922','_blank')">
-          Continue to Order
-        </button>
+        <button class="btn-order" onclick="window.open('https://wa.me/6285168634922', '_blank')">Continue to Order</button>
       </div>
     </div>
   </div>
 </div>
 
 <footer class="footer">
-  <p>
-    Need help with your purchase? Contact us directly on WhatsApp at
-    <a href="https://wa.me/6285168634922" target="_blank">+6285168634922</a>
-  </p>
+  <p>Need help with your purchase? Contact us directly on WhatsApp at <a href="https://wa.me/6285168634922" target="_blank">+6285168634922</a></p>
 </footer>
 
-<script src="src/script.js"></script>
 <script src="src/store.js"></script>
+<script src="src/script.js"></script>
 <script src="src/main.js"></script>
 </body>
 </html>
