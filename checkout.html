@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | Vanyla</title>
+
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" href="src/checkout.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-content">
+    <span class="logo">Joyysrvx</span>
+    <div class="nav-links desktop-nav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/store" class="nav-link">Store</a>
+      <a href="/vanyla" class="nav-link">Vanyla Ai | Bot WhatsApp</a>
+      <a href="/ngl" class="nav-link">NGL</a>
+      <a href="/game/game" class="nav-link">Game</a>
+    </div>
+    <button id="menu-toggle" class="menu-toggle">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</nav>
+
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-content">
+    <button id="close-sidebar" class="close-button">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="sidebar-links">
+      <a href="/" class="sidebar-link"><i data-lucide="home"></i>Home</a>
+      <a href="/store" class="sidebar-link"><i data-lucide="store"></i>Store</a>
+      <a href="/vanyla" class="sidebar-link"><i data-lucide="bot"></i>About Vanyla Ai</a>
+      <a href="/ngl" class="sidebar-link"><i data-lucide="mail"></i>NGL</a>
+      <a href="/game/game" class="sidebar-link"><i data-lucide="gamepad-2"></i>Game</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <p class="subheader">Checkout</p>
+  <p class="subdesc">Lengkapi detail pembelian Anda</p>
+
+  <div class="checkout-box">
+    <label>Pilih Produk</label>
+    <select id="checkoutProduct">
+      <option value="">Pilih Produk</option>
+    </select>
+
+    <label>Paket / Varian</label>
+    <select id="checkoutVariant">
+      <option value="">Pilih Paket</option>
+    </select>
+
+    <label>Beli Berapa?</label>
+    <input type="number" id="checkoutQty" min="1" value="1">
+
+    <button class="btn-order" id="checkoutOrder">Lanjutkan ke WhatsApp</button>
+  </div>
+</main>
+
+<footer class="footer">
+  <p>Need help with your purchase? Contact us directly on WhatsApp at <a href="https://wa.me/6285168634922" target="_blank">+6285168634922</a></p>
+</footer>
+
+<script src="src/script.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
