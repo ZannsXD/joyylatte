@@ -12,18 +12,18 @@ openBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     modal.style.display = 'flex';
 
-    modalTitle.textContent = btn.getAttribute('data-title');
-    modalPrice.textContent = btn.getAttribute('data-price');
-    modalDesc.innerHTML = btn.getAttribute('data-desc');
-    modalImg.src = btn.getAttribute('data-img');
+    modalTitle.textContent = btn.getAttribute('data-title') || '';
+    modalPrice.textContent = btn.getAttribute('data-price') || '';
+    modalDesc.textContent = btn.getAttribute('data-desc') || '';
+    modalImg.src = btn.getAttribute('data-img') || '';
   });
 });
 
-closeBtn.addEventListener('click', () => {
+closeBtn?.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 
-backBtn.addEventListener('click', () => {
+backBtn?.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 

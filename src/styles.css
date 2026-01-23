@@ -402,6 +402,7 @@ hr {
   max-height: 200px;
   overflow-y: auto;
   padding-right: 10px;
+  white-space: pre-line;
 }
 
 #modalDesc::-webkit-scrollbar {
