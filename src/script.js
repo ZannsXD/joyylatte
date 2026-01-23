@@ -14,7 +14,11 @@ openBtns.forEach(btn => {
 
     modalTitle.textContent = btn.getAttribute('data-title') || '';
     modalPrice.textContent = btn.getAttribute('data-price') || '';
-    modalDesc.textContent = btn.getAttribute('data-desc') || '';
+
+    // FIX: ubah "\n" (teks) jadi baris baru asli
+    modalDesc.textContent =
+      (btn.getAttribute('data-desc') || '').replace(/\\n/g, '\n');
+
     modalImg.src = btn.getAttribute('data-img') || '';
   });
 });
