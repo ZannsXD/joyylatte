@@ -4,7 +4,7 @@
     "nama": "Sewa Bot",
     "harga": "Mulai dari Rp5.000",
     "desc": "Jalankan Bisnis Atau Setting Group Anda Dengan Mudah",
-    "descmodal": "❏ Harga Sewa\\n❃ 10 Hari Rp5.000 / Group\\n❃ 20 Hari Rp10.000 / Group\\n❃ 30 Hari Rp15.000 / Group\\n❏ Fitur\\n❃ Antilink\\n❃ Welcome\\n❃ Enable\\n❃ Store List",
+    "descmodal": "❏ Harga Sewa\n❃ 10 Hari Rp5.000 / Group\n❃ 20 Hari Rp10.000 / Group\n❃ 30 Hari Rp15.000 / Group\n\n❏ Fitur\n❃ Antilink\n❃ Welcome\n❃ Enable\n❃ Store List",
     "kategori": "Bot"
   },
   {
@@ -12,7 +12,7 @@
     "nama": "Premium Membership",
     "harga": "Mulai dari Rp5.000",
     "desc": "Upgrade Statusmu Menjadi Premium Dan Dapatkan Bonus",
-    "descmodal": "❏ Harga Premium\\n❃ 15 Hari / Rp5.000\\n❃ 30 Hari / Rp10.000\\n❏ Fitur\\n❃ Unlimited Limit\\n❃ Bonus Money Game",
+    "descmodal": "❏ Harga Premium\n❃ 15 Hari / Rp5.000\n❃ 30 Hari / Rp10.000\n\n❏ Fitur\n❃ Unlimited Limit\n❃ Bonus Money Game",
     "kategori": "Membership"
   },
   {
@@ -20,7 +20,7 @@
     "nama": "Jadi Bot",
     "harga": "Mulai dari Rp7.000",
     "desc": "Atur Nomormu Untuk Merespons Pesan Otomatis",
-    "descmodal": "❏ Harga Jadi Bot\\n❃ 07 Hari / Rp7.000\\n❃ 15 Hari / Rp10.000\\n❏ Keuntungan\\n❃ Nomormu Jadi Owner",
+    "descmodal": "❏ Harga Jadi Bot\n❃ 07 Hari / Rp7.000\n❃ 15 Hari / Rp10.000\n\n❏ Keuntungan\n❃ Nomormu Jadi Owner",
     "kategori": "Bot"
   },
   {
@@ -28,7 +28,7 @@
     "nama": "Panel Pterodactyl",
     "harga": "Mulai dari Rp3.000",
     "desc": "Jalankan Script Bot Dengan Server Premium Anti Delay",
-    "descmodal": "⌞ PANEL PRIVATE BY VANYLA 🍦 ⌝\\n→ RAM 3GB CPU UNLI — Rp3.000\\n→ RAM 4GB CPU UNLI — Rp4.000",
+    "descmodal": "⌞ PANEL PRIVATE BY VANYLA 🍦 ⌝\n→ RAM 3GB CPU UNLI — Rp3.000\n→ RAM 4GB CPU UNLI — Rp4.000",
     "kategori": "Server"
   },
   {
@@ -36,7 +36,7 @@
     "nama": "Script Vanyla Ai",
     "harga": "Mulai dari Rp25.000",
     "desc": "Dapatkan Script Bot WhatsApp No Encrypt 100%",
-    "descmodal": "✨ Fitur Unggulan:\\n- 1000+ Fitur\\n- Pesan Button\\n- Respon Otomatis",
+    "descmodal": "✨ Fitur Unggulan:\n- 1000+ Fitur\n- Pesan Button\n- Respon Otomatis",
     "kategori": "Script"
   }
 ]
